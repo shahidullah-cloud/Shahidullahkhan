@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Md. Shahidullah | Survey Programmer</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fb;
+        color: #222;
+        line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+        background: #111827;
+        color: white;
+        padding: 18px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #38bdf8;
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #111827, #1e3a5f);
+        color: white;
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+        margin-bottom: 15px;
+    }
+
+    .hero h2 {
+        color: #38bdf8;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        color: #d1d5db;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #38bdf8;
+        color: #111827;
+        padding: 13px 25px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: 0.3s;
+        margin: 5px;
+    }
+
+    .btn:hover {
+        background: white;
+        transform: translateY(-3px);
+    }
+
+    /* General Section */
+    section {
+        padding: 80px 10%;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+        color: #111827;
+    }
+
+    .section-title p {
+        color: #666;
+        margin-top: 10px;
+    }
+
+    /* About */
+    .about {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+        font-size: 17px;
+        color: #555;
+    }
+
+    /* Skills */
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+    }
+
+    .skill-card {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .skill-card h3 {
+        margin-bottom: 15px;
+        color: #1e3a5f;
+    }
+
+    /* Experience */
+    .experience-container {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .experience-card {
+        background: white;
+        padding: 30px;
+        margin-bottom: 25px;
+        border-left: 5px solid #38bdf8;
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .experience-card h3 {
+        color: #111827;
+        margin-bottom: 5px;
+    }
+
+    .experience-card h4 {
+        color: #38bdf8;
+        margin-bottom: 15px;
+    }
+
+    .experience-card ul {
+        padding-left: 20px;
+    }
+
+    /* Projects */
+    .projects {
+        background: #eef2f7;
+    }
+
+    .project-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .project-card {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .project-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .project-card h3 {
+        color: #1e3a5f;
+        margin-bottom: 15px;
+    }
+
+    /* Contact */
+    .contact {
+        text-align: center;
+        background: #111827;
+        color: white;
+    }
+
+    .contact .section-title h2 {
+        color: white;
+    }
+
+    .contact .section-title p {
+        color: #d1d5db;
+    }
+
+    .contact-info {
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+    .contact-info a {
+        color: #38bdf8;
+        text-decoration: none;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        background: #020617;
+        color: #aaa;
+        padding: 20px;
+    }
+
+    /* Mobile */
+    @media(max-width: 768px) {
+
+        nav {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav ul {
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+        }
+
+        .hero h2 {
+            font-size: 20px;
+        }
+
+        section {
+            padding: 60px 7%;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Navigation -->
+
+<nav>
+    <div class="logo">Shahidullah</div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Md. Shahidullah</h1>
+
+        <h2>Survey Programmer & Survey Design Specialist</h2>
+
+        <p>
+            Experienced in survey programming, survey design, testing,
+            data validation, and advanced market research methodologies.
+        </p>
+
+        <a href="#contact" class="btn">Contact Me</a>
+
+        <a href="#projects" class="btn">View My Work</a>
+
+    </div>
+
+</section>
+
+
+<!-- About Section -->
+
+<section id="about">
+
+    <div class="section-title">
+
+        <h2>About Me</h2>
+
+    </div>
+
+    <div class="about">
+
+        <p>
+            I am a Survey Programmer with experience in designing,
+            programming, testing, and delivering complex market research
+            surveys.
+        </p>
+
+        <br>
+
+        <p>
+            I specialize in survey programming using platforms such as
+            Decipher / Forsta and SurveyCTO. My experience includes
+            advanced survey logic, quota management, MaxDiff,
+            RealEye integration, Typing Tool implementation,
+            data validation, reporting setup, and quality assurance.
+        </p>
+
+        <br>
+
+        <p>
+            I enjoy solving complex programming challenges and ensuring
+            that surveys provide a smooth and reliable experience for
+            respondents and clients.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Skills Section -->
+
+<section id="skills">
+
+    <div class="section-title">
+
+        <h2>Skills & Expertise</h2>
+
+        <p>Technologies and research tools I work with</p>
+
+    </div>
+
+
+    <div class="skills-container">
+
+
+        <div class="skill-card">
+
+            <h3>Survey Programming</h3>
+
+            <p>
+                Survey logic, skip patterns, piping, validation,
+                randomization and complex questionnaire programming.
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>Forsta / Decipher</h3>
+
+            <p>
+                Advanced survey programming, XML, VST,
+                quotas and reporting setup.
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>SurveyCTO</h3>
+
+            <p>
+                Form design, data collection workflows,
+                validations and survey management.
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>Advanced Research Tools</h3>
+
+            <p>
+                MaxDiff, RealEye, Typing Tool,
+                Image Maps and Virtual Shelf studies.
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>Data & Quality Assurance</h3>
+
+            <p>
+                Survey testing, data validation,
+                Excel formatting and quality checking.
+            </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+            <h3>Project Management</h3>
+
+            <p>
+                Questionnaire review, effort estimation,
+                client communication and project coordination.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- Experience Section -->
+
+<section id="experience">
+
+    <div class="section-title">
+
+        <h2>Professional Experience</h2>
+
+    </div>
+
+
+    <div class="experience-container">
+
+
+        <div class="experience-card">
+
+            <h3>Survey Programmer</h3>
+
+            <h4>Market Research & Survey Technology</h4>
+
+            <ul>
+
+                <li>
+                    Review questionnaires for quality, compliance
+                    and programming requirements.
+                </li>
+
+                <li>
+                    Program complex surveys using survey platforms
+                    such as Decipher / Forsta.
+                </li>
+
+                <li>
+                    Implement advanced logic, quotas, validation
+                    and respondent routing.
+                </li>
+
+                <li>
+                    Test surveys to ensure accurate logic,
+                    flow and functionality.
+                </li>
+
+                <li>
+                    Configure MaxDiff, RealEye,
+                    Typing Tool and other advanced methodologies.
+                </li>
+
+                <li>
+                    Download, validate and format survey data
+                    for reporting and delivery.
+                </li>
+
+                <li>
+                    Communicate with clients and project teams
+                    regarding technical requirements.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- Projects Section -->
+
+<section id="projects" class="projects">
+
+    <div class="section-title">
+
+        <h2>Selected Work & Projects</h2>
+
+        <p>Examples of the types of projects I work on</p>
+
+    </div>
+
+
+    <div class="project-container">
+
+
+        <div class="project-card">
+
+            <h3>Advanced Survey Programming</h3>
+
+            <p>
+                Developed complex surveys with advanced routing,
+                conditional logic, randomization, validation
+                and quota management.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>MaxDiff Studies</h3>
+
+            <p>
+                Implemented MaxDiff studies including
+                design setup, programming, testing
+                and respondent experience validation.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>RealEye Integration</h3>
+
+            <p>
+                Worked with RealEye eye-tracking integration
+                and calibration requirements for
+                research projects.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>Virtual Shelf Studies</h3>
+
+            <p>
+                Supported product shelf and shopper research
+                projects including image-based
+                and virtual shopping experiences.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>Data Validation</h3>
+
+            <p>
+                Performed data checking, validation,
+                formatting and preparation of
+                interim and final survey data.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>International Research</h3>
+
+            <p>
+                Worked on market research projects
+                across multiple countries and markets
+                with different survey requirements.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- Contact Section -->
+
+<section id="contact" class="contact">
+
+    <div class="section-title">
+
+        <h2>Let's Work Together</h2>
+
+        <p>
+            Feel free to contact me for survey programming,
+            research technology and project collaboration.
+        </p>
+
+    </div>
+
+
+    <div class="contact-info">
+
+        <p>
+            📧 Email:
+            <a href="mailto:your-email@example.com">
+                your-email@example.com
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            💻 GitHub:
+            <a href="https://github.com/yourusername" target="_blank">
+                github.com/yourusername
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            🔗 LinkedIn:
+            <a href="#" target="_blank">
+                Add Your LinkedIn Profile
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <p>
+        © 2026 Md. Shahidullah | Survey Programmer Portfolio
+    </p>
+
+</footer>
+```
+
+</body>
+</html>
